@@ -1,0 +1,36 @@
+{
+  "name": "ReadIt",
+  "version": "1.0.0",
+  "description": "My First Application with ElectronJs",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "watch": "nodemon --exec electron .",
+    "reset": "git reset --hard",
+    "win-cert":"electron-builder create-self-signed-cert -p ItBCT",
+    "build":"electron-builder -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "https://github.com/javamohammed/read-it-electronjs",
+  "homepage": "https://github.com/javamohammed/read-it-electronjs",
+  "author": "Mohammed Aoulad Bouchta ItBCT",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^7.1.7",
+    "nodemon": "^2.0.2"
+  },
+  "dependencies": {
+    "colors": "^1.4.0",
+    "electron-window-state": "^5.0.3",
+    "electron-windows-store": "^2.1.0"
+  },
+  "build": {
+    "appId": "com.itbct.readit",
+    "copyright": "Copyright 2020 ItBCT",
+    "win":{
+      "certificateFile": "private/ItBCT.pfx",
+      "certificatePassword": "",
+      "publisherName": "ItBCT"
+    }
+  }
+}
